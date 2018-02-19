@@ -1,0 +1,46 @@
+body
+{
+  // On crée un flexbox
+  display: flex;
+  // On centre horizontalement
+  justify-content: center;
+  // On centre verti
+  //align-items: center;
+  background-color: #10100f;
+}
+
+.container
+{
+  display: flex;
+  background-color :white;
+  width: 50rem;
+  margin-top: 10rem;
+  height: 20rem;
+  border-radius: 10px;
+}
+
+
+.container > div
+{
+  padding: 20px;
+}
+// On prend la première div en dessous du container
+.container > div:first-child
+{
+	background-color :rgb(44, 75, 238);
+  //largeur de la div
+  width: 60%;
+  // texte en blanc
+  color :white;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.container form input[type=submit]
+{
+  background-color: rgb(44, 75, 238);
+}
+
+.créeruncompte
+{
+  background-color: grey;
+}
