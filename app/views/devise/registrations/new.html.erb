@@ -1,42 +1,55 @@
 <div class="container">
-  <div>
-    <h1>uniform</h1>
+  <div class="uniform">
+    <br><br><br>
+    <h1 class="h1">uniform</h1>
     <p>L'inscription devient plus simple</p>
-    <hr>
+    <br>
+    <hr width="15%">
     <ul>
-      <li>Un seul formulaire pour toutes les écoles</li>
-      <li>Gérez facilement vos candidatures</li>
-      <li>Stocker vos données scolaires</li>
+      <br>
+      <li><i class="fas fa-file"></i> &nbsp;&nbsp; Un seul formulaire pour toutes les ecoles</li>
+      <br>
+      <li><i class="fas fa-graduation-cap"></i>&nbsp;&nbsp;Gérez facilement vos candidatures</li>
+      <br>
+      <li><i class="fas fa-cloud"></i>&nbsp;&nbsp;Stocker vos données scolaires</li>
     </ul>
   </div>
 
   <div>
-    <div class="">
+    <div class="formulaire">
+      <h6>Entrez vos identifiants</h6>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
         <div class="field">
+          <i class="far fa-user"></i>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Adresse email" %>
         </div>
+        <br>
 
         <div class="field">
           <% if @minimum_password_length %>
+            <i class="far fa-unlock-alt"></i>
             <%= f.password_field :password, autocomplete: "off", placeholder: "Mot de passe (#{@minimum_password_length} characters min)" %>
             <% else %><br />
             <%= f.password_field :password, autocomplete: "off", placeholder: "Mot de passe" %>
           <% end %>
+        </div>
+        <br>
 
         <div class="field">
+          <i class="far fa-lock"></i>
           <%= f.password_field :password_confirmation, autocomplete: "off",  placeholder: "Confirmation mot de passe" %>
         </div>
+        <br>
 
         <div class="actions">
-          <%= f.submit "Connexion" %>
+          <%= f.submit "Créer mon compte" %>
         </div>
       <% end %>
     </div>
 
-    <div class="créeruncompte">
+    <div class="connexion">
       <%= render "devise/shared/links" %>
     </div>
   </div>
